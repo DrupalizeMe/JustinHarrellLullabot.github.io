@@ -1,0 +1,7 @@
+@mixin background-color-wrap($color){
+	background-color: $color;
+}
+
+@mixin color-scheme($color) {
+	background-color: $color;
+}

@@ -1,0 +1,316 @@
+//////////////////
+// Page Layout //
+////////////////
+
+.container {
+	@include outer-container;
+	background-color: $light-background;
+	max-width: 100%;
+	}
+
+.banner {
+	height: 6.25em;
+	margin-top: 0;
+	background-color: #fff;
+	border-bottom: 1px solid $light-border;
+		img {
+		width: 14em;
+		margin-left: 8%;
+		margin-top: .75em;
+		}
+	}
+
+.intro {
+	margin: 6.25em auto 0 auto;
+	@include pad(0 6.25em);
+	@include clearfix;
+
+		@include media($Second-Break) {
+		@include pad(1em 1em 0 1em);
+		}
+
+			img {
+			@include span-columns(8 of 12);
+			@include shift(2);
+			@include pad(4em 0 0 0);
+			vertical-align: bottom;
+
+				@include media($Second-Break) {
+				@include span-columns(12 of 12);
+				@include shift(0);
+				}
+			}
+			p {
+			max-width: 800px;
+			margin: 0 auto;
+			}
+}
+
+.container_wrap_color {
+	max-width: 100%;
+	@include background-color-wrap($blue);
+	@include pad(0);
+	margin: 0;
+}
+
+.color_pal {
+	@include outer-container;
+	@include reversed-content;
+	margin-top: 0;
+	background-color: $blue;
+	
+		img {
+		@include span-columns(6 of 12);
+		@include shift(3);
+		@include pad(6.25em 1em 0 1em);
+		vertical-align: bottom;
+		padding-top: 0;
+
+			@include media($Second-Break) {
+			@include span-columns(8 of 12);
+			@include shift(2);
+			}
+		}
+}
+
+.colors {
+	@include span-columns(12);
+	@include pad(2em 0 4em 0);
+	margin: 0 auto;
+
+	ul {
+	max-width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0 !important;
+	}
+
+	li.block {
+		display: inline;
+		margin-bottom: 2em auto 0 auto;
+
+				figure {
+				@include border-top-radius(50%);
+				@include border-bottom-radius(50%);
+				@include border-left-radius(50%);
+				@include border-right-radius(50%);
+				background-color: $green;
+				border: .4em solid #fff;
+				width: 7em;
+				height: 7em;
+				margin: 1em 1em;
+
+					&:hover {
+					@include animation(scale 1.0s ease-in, slide 1s ease);
+					@include box-shadow(0 10px $darkblue);
+					@include transition(box-shadow .5s $ease-in-quad);
+					}
+				}
+	}
+}
+	
+///////////////////
+// Brand Colors //
+/////////////////
+
+#blue {
+	@include color-scheme($blue);
+	h3{
+	color: darken($blue, 20%);
+	}
+}
+#orange {
+	@include color-scheme($orange);
+	h3 {
+	color: darken($orange, 20%);
+	}
+}
+#gold {
+	@include color-scheme($gold);
+	h3 {
+	color: darken($gold, 20%);
+	}
+}
+#green {
+	@include color-scheme($green);
+	h3 {
+	color: darken($green, 20%);
+	}
+}
+#charcoal {
+	@include color-scheme($charcoal);
+	h3 {
+	color: darken($charcoal, 20%);
+	}
+}
+#silver {
+	@include color-scheme($silver);
+	h3 {
+	color: darken($silver, 20%);
+	}
+}
+#headline {
+	@include color-scheme($headline);
+	h3 {
+	color: darken($headline, 20%);
+	}
+}
+#blue-shade {
+	@include color-scheme(darken($blue, 10%));
+}
+
+#orange-shade {
+	@include color-scheme(darken($orange, 10%));
+}
+
+#gold-shade {
+	@include color-scheme(darken($gold, 10%));
+}
+
+#green-shade {
+	@include color-scheme(darken($green, 10%));
+}
+
+#charcoal-shade {
+	@include color-scheme(darken($charcoal, 10%));
+	}
+
+#silver-shade {
+	@include color-scheme(darken($silver, 20%));
+	}
+
+#blue-shade-two {
+@include color-scheme(darken($blue, 20%));
+}
+
+#orange-shade-two {
+	@include color-scheme(darken($orange, 20%));
+}
+
+#gold-shade-two {
+	@include color-scheme(darken($gold, 20%));
+}
+
+#green-shade-two {
+	@include color-scheme(darken($green, 20%));
+}
+
+#charcoal-shade-two {
+	@include color-scheme(darken($charcoal, 20%));
+	}
+
+#silver-shade-two {
+	@include color-scheme(darken($silver, 30%));
+	}
+
+//////////////////////
+// End Brand Colors //
+/////////////////////
+
+////////////////
+// Logo Usage //
+////////////////
+
+
+.logo-usage {
+	@include span-columns(12);
+	background-color: darken($blue, 10%);
+	@include reversed-content;
+	@include pad(0 6.25em);
+	@include clearfix;
+	margin: 0 auto 0 auto;
+		p {
+		max-width: 560px;
+		margin: 0 auto;
+		padding-bottom: 2em;
+		}
+	@include media($Second-Break) {
+	@include pad(0 0);
+	}
+}
+
+.logo-stage {
+	@include span-columns(12 of 12);
+	@include border-top-radius(5px);
+	@include border-bottom-radius(0);
+	@include box-shadow(0 -1px 5px darken($darkblue, 10%));
+	padding-bottom: 4em;
+	background-color: white;
+
+		.image-container {
+		@include clearfix;
+		}
+
+		img {
+		@include span-columns(6 of 12);
+		@include shift(3);
+		margin-top: 5em;
+		display: block;
+			
+			@include media($Second-Break) {
+			@include span-columns(10 of 12);
+			@include shift(1);
+			}
+		}
+
+		p {
+		margin-top: 2em;
+		color: $text;
+
+			@include media($First-Break) {
+			@include pad(0 1em);
+			}
+
+			@include media($Second-Break) {
+			@include pad(0 1em);
+			}
+
+			a {
+			font-size: 1.25em;
+			margin-top: 4em;
+
+				@include media($Second-Break) {
+				width: 100%;
+				font-size: 1em;
+				}
+			}
+		}
+}
+
+///////////////////
+// End Logo Use //
+/////////////////
+
+///////////////////////
+// Begin Typography //
+/////////////////////
+
+.typography {
+	@include span-columns(12);
+	background-color: $light-background;
+	@include pad(6.25em 6.25em);
+	@include clearfix;
+
+		@include media($Second-Break) {
+		@include pad(6.25em 3em);
+		}
+
+		p {
+		max-width: 700px;
+		margin: 0 auto;
+		}
+	}
+
+.container_wrap_typography {
+	@include background-color-wrap($light-background);
+	border-top: 1px solid $light-border;
+	@include pad(0);
+	max-width: 100%;
+	margin: 0;
+}
+
+.type-examples {
+	@include span-columns(8 of 12);
+	@include shift(2);
+	@include pad(0  0 6.25em 0);
+}

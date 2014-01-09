@@ -1,0 +1,259 @@
+@mixin reversed-content {
+  h1  {
+    color: #fff;
+    padding-top: 2em;
+    }
+  p {
+    color: #fff;
+    }
+}
+
+// Global type stuff
+
+body {
+  color: $text;
+  font-family: $sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+  @include transition (color 0.25s ease-in 0s);
+  &:hover {
+    color: $orange-dark;
+    @include transition (color 0.25s ease-in 0s);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.125;
+  color: $headline;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h6 {
+  font-size: 0.8125em;
+  color: $orange-dark;
+}
+
+hr {
+  border: 0;
+  background: $light-border;
+  height: 1px;
+  margin: 2em 0;
+}
+
+code {
+  color: $orange-dark;
+}
+
+mark {
+  background: $gold;
+}
+
+del {
+  color: red;
+}
+
+ins {
+  color: $green-dark;
+}
+
+table {
+  
+}
+
+.tooltip {
+  position: relative;
+  display: inline;
+  background: url(../_images/icon_info.svg) no-repeat right center;
+  background-size: 8px 8px;
+  padding-right: 12px;
+  &:hover:after {
+    content: attr(title);
+    font-style: italic;
+    background: rgba(24,145,209,0.9);
+    color: white;
+    padding: 1em;
+    border-radius: .5em;
+    position: absolute;
+    left: -10%;
+    bottom: 26px;
+    z-index: 98;
+    width: auto;
+    white-space: nowrap;
+    max-width: 220px;
+    line-height: 1.25;
+  }
+  &:hover:before {
+    border: solid;
+    border-color: rgba(24,145,209,0.9) transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+  }
+}
+
+
+// Content area
+
+.content {
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2em;
+    margin-bottom: .5em;
+  }
+  
+  .meta {
+    font-size: 0.75em;
+  }
+  
+  ul, ol {
+    padding: 0;
+    li {
+      margin-left: 1.5em;
+    }
+  }
+  
+  dl {
+    dt {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $headline;
+      margin-top: 1em;
+    }
+    dd {
+      margin-left: 0;
+    }
+  }
+  
+  abbr {
+    border-bottom: 1px dotted $orange-dark;
+  }
+  
+  a {
+    border-bottom: 1px dotted $link;
+    @include transition (color 0.25s ease-in 0s, border-bottom-color 0.25s ease-in 0s, border-bottom-style 0.25s ease-in 0s);
+    &:hover {
+      border-bottom: 1px solid $orange-dark;
+      @include transition (color 0.25s ease-in 0s, border-bottom-color 0.25s ease-in 0s, border-bottom-style 0.25s ease-in 0s);
+    }
+  }
+  
+  blockquote {
+    margin-right: 0;
+    margin-left: 0;
+    margin: 1.5em 0;
+    padding-left: 2em;
+    border-left: 5px solid $button-background;
+    p {
+      font-family: $serif;
+      font-style: italic;
+      font-size: 1.25em;
+      color: $headline-light;
+    }
+  }
+  
+  q {
+    font-family: $serif;
+    font-style: italic;
+  }
+  
+  .fancy {
+    li {
+      margin-left: 0;
+      padding-left: 1.5em;
+      list-style: none;
+      background: url(../_images/icon_drop_orange.svg) no-repeat left .5em;
+      background-size: 8.88141527688199px 10px;
+      li {
+        margin-left: 1.5em;
+        padding-left: 0;
+        list-style: disc;
+        background: none;
+      }
+    }
+  }
+  
+}
+
+
+// Sidebar area
+
+.content-secondary {
+  h1, h2, h3, h4, h5, h6 {
+    color: $headline-light;
+  }
+}
+
+
+// Primary Nav
+
+#menu a {
+  font-weight: bold;
+}
+
+// Style Guide Buckets
+
+.container {
+  p {
+    text-align: center;
+    line-height: 2em;
+    color: $text;
+    margin: 0;
+    }
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    line-height: 1.25em;
+    color: $headline;
+    margin: 0 0 .25em 0;
+
+      @include media($Second-Break) {
+      font-size: 1.5em;
+      }
+    }
+  }
+
+  figure {
+    h3 {
+        font-size: 1em;
+        padding-top: 25%;
+        text-align: center;
+    }
+  }
+
+  .type-examples {
+    h1 {
+    text-align: left;
+    }
+    p {
+    text-align: left;
+    margin-bottom: 2em;
+    }
+      .serif {
+      font-family: $serif;
+      }
+  }
+
+
+/////////////////////////////
+// 48em min-width (768px) //
+/////////////////////////////
+
+@media screen and (min-width: 48em) {
+  
+  .article-title {
+    font-size: 3em;
+  }
+  
+}

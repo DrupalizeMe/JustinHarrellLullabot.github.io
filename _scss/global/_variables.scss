@@ -1,0 +1,38 @@
+// Colors
+
+$blue: #137CC1;
+$darkblue: #0f629a;
+$link: #007cc4;
+$text: #555555;
+$text-light: #c0c0c0;
+$headline: #333333;
+$headline-light: #4f4f4f;
+$charcoal: #4D4D4F;
+$silver: #f5f5f5;
+$light-background: #f5f5f5;
+$light-border: #e6e6e6;
+$light-blue: #b2c8d4;
+$button-background: #1790d2;
+$button-background-dark: #1273a8;
+$footer-text: #48555e;
+$blue-background: #273138;
+$orange: #fd7037;
+$orange-dark: #fd5a19;
+$gold: #ffd76d;
+$gold-light: #fff0c2;
+$green: #00be4c;
+$green-dark: #00a945;
+$light-green: rgba(156,210,0,1);
+$red: #c60e00;
+
+
+// Fonts
+
+$sans-serif: "proxima-nova", Helvetica, Arial, Tahoma, sans-serif;
+$serif: "chaparral-pro", Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+//Breakpoints
+
+$First-Break: new-breakpoint(max-width 750px);
+
+$Second-Break: new-breakpoint(max-width 520px);

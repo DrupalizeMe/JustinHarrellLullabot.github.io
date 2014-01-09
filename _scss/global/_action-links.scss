@@ -1,0 +1,74 @@
+// If you're looking for the .action-link styling for button-like links, it lives in /global/_forms.scss
+
+.video-action-links {
+
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    border-top: 1px solid $light-border;
+    &:first-child {
+      border-top: none;
+    }
+  }
+  
+  a {
+    font-weight: bold;
+    display: block;
+    padding: .5em 0;
+    font-size: 1em;
+  }
+  
+  .add-to-queue {
+    padding-left: 1.25em;
+    background: url(../_images/icon_plus.svg) no-repeat left center;
+    background-size: auto 1em;
+  }
+  
+  .transcript {
+    padding-left: 1em;
+    background: url(../_images/icon_notebook.svg) no-repeat left center;
+    background-size: auto 1em;
+  }
+  .share {
+    padding-left: 1.2em;
+    background: url(../_images/icon_share.svg) no-repeat left .95em;
+    background-size: auto 1em;
+  }
+  .quality {
+    padding-left: 1.2em;
+    background: url(../_images/icon_gear.svg) no-repeat left 1.05em;
+    background-size: auto 1em;
+  }
+  
+  .open {
+    color: $charcoal;
+  }
+  
+}
+
+////////////////////////////
+// 54em min-width (768px) //
+////////////////////////////
+
+@media screen and (min-width: 54em) {
+
+  .video-action-links {
+    padding: .5em 0;
+    @include span-columns(7, 12);
+    li {
+      display: inline-block;
+      margin-right: 1em;
+      border-top: none;
+    }
+    a {
+      padding: .75em 0;
+      font-size: 0.875em;
+    }
+  }
+
+}

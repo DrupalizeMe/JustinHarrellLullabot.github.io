@@ -1,0 +1,217 @@
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="email"],
+textarea {
+  -webkit-font-smoothing: antialiased;
+  max-width: 100%;
+  border: 1px solid rgba(0,0,0,.2); /* stroke */
+  border-radius: 2px; /* border radius */
+  box-shadow: inset 0 0 4px rgba(0,0,0,.1); /* inner shadow */
+  padding: .25em .5em;
+  font-family: $serif;
+  color: $text;
+  font-size: 1.125em;
+  outline:none;
+  @include box-sizing(border-box);
+  @include transition (all 0.25s ease-in-out);
+  &:focus {
+    @include box-shadow(0 0 5px rgba(81, 203, 238, .8));
+    border: 1px solid rgba(81, 203, 238, 1);
+  }
+}
+
+textarea {
+  padding: .75em;
+  width: 100%;
+}
+
+input[type="submit"],
+.action-link {
+  
+  -webkit-font-smoothing: antialiased;
+  background: $button-background;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-family: $sans-serif;
+  font-weight: bold;
+  font-size: .875em;
+  border: 1px solid $button-background;
+  padding: .75em 2em;
+  line-height: 1;
+  @include transition (all 0.25s ease-in 0s);
+  
+  &:hover {
+    background: $orange;
+    border: 1px solid $orange;
+    color: white;
+    @include transition (all 0.25s ease-in 0s);
+  }
+  
+}
+
+.action-link.secondary {
+  
+  -webkit-font-smoothing: antialiased;
+  background: $orange;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-family: $sans-serif;
+  font-weight: bold;
+  font-size: .875em;
+  border: 1px solid $orange;
+  padding: .75em 2em;
+  line-height: 1;
+  @include transition (all 0.25s ease-in 0s);
+  
+  &:hover {
+    background: $button-background;
+    border: 1px solid $button-background;
+    color: white;
+    @include transition (all 0.25s ease-in 0s);
+  }
+  
+}
+
+input[value="Preview"],
+.action-link.tertiary {
+  -webkit-font-smoothing: antialiased;
+  background: $light-background;
+  border: 1px solid $light-border;
+  border-radius: 5px;
+  color: $headline-light;
+  text-align: center;
+  font-family: $sans-serif;
+  font-weight: normal;
+  font-size: .875em;
+  padding: .75em 2em;
+  line-height: 1;
+  @include transition (all 0.25s ease-in 0s);
+  
+  &:hover {
+    border: 1px solid $text-light;
+    color: $headline;
+    @include transition (all 0.25s ease-in 0s);
+  }
+}
+
+input[type="submit"],
+input[value="Preview"],
+.action-link {
+  display: inline-block;
+  margin: .5em 0;
+  margin-right: .5em;
+  white-space: nowrap;
+}
+
+input[type="submit"] {
+  &.refresh {
+    background: none;
+    border: none;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    background: url(../_images/icon_refresh.svg) no-repeat center center;
+    background-size: 24px 20px;
+    margin: 0;
+    margin-top: -6px;
+    @include hide-text;
+    border: 1px solid transparent;
+    border-radius: .5em;
+    &:hover {
+      border: 1px solid $light-border;
+    }
+  }
+}
+
+a.cancel {
+  display: inline-block;
+  font-size: .875em;
+  font-style: italic;
+  border-bottom: none;
+  margin: 0 .25em;
+}
+
+label {
+  display: block;
+  font-size: .875em;
+  font-weight: bold;
+  color: $headline;
+}
+
+label.check {
+  font-weight: normal;
+}
+
+fieldset {
+  border: none;
+  border-top: 3px solid $button-background;
+  position: relative;
+  padding: 1em 0;
+  margin: 2em 0;
+  fieldset {
+    margin-top: 3em;
+    padding-left: 1.5em;
+    padding-bottom: 0;
+    border-top: none;
+    border-left: 3px solid $button-background;
+    legend {
+      span {
+        top: 0;
+        padding-right: .75em;
+      }
+      abbr.required {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+legend {
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $headline;
+  span {
+    position: absolute;
+    top: -2em;
+    left: 0;
+  }
+}
+
+abbr.required {
+  border-bottom: none;
+  color: $orange-dark;
+  position: relative;
+  display: inline;
+}
+
+.form-title {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.form-item {
+  margin-top: 1em;
+}
+
+.description {
+  font-size: .75em;
+  font-style: italic;
+  display: block;
+  margin-top: .5em;
+  line-height: 1.25;
+}
+
+.options {
+  ul {
+    li {
+      list-style: none;
+      margin-left: 0;
+    }
+  }
+}
